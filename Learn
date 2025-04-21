@@ -1,0 +1,2098 @@
+# Пиши свои ответы по Русский
+## a=int(input())
+## b=int(input())
+## print(int((a**2+b**2)**0.5))
+## print(bool(None))
+##
+## print(5 >= 5)
+##
+## print(5 != 5)
+##
+## [print(10 * "*") if i == 0 or i == 4 else print("*        *") for i in range(5)]
+##
+## try:
+##    first = 22
+##    second = 25
+##    third = 30
+##    tables = (round((first + second + third) / 2))
+##    print(tables)
+## except ValueError:
+##    print('Вы ввели не число')
+##
+## [print(i) for i in input()]
+## try:
+##    print(sum(list(map(int, input()))))
+## except ValueError:
+##   print('Вы ввели не число')
+#
+#
+## try:
+##    print(int(((int(input()) ** 2) + (int(input()) ** 2)) ** 0.5))
+## except ValueError:
+##    print('Вы ввели не число')
+## num = abs(int (input()))
+## if num <= 10000:
+##    print(f"The next number for the number {num} is {num + 1}.")
+##    print(f"The previous number for the number {num} is {num - 1}.")
+## else:
+##    print('Условие не выполненной')
+#
+## try:
+##    num = int(input())
+##    print((num + 2) - num % 2)
+## except ValueError:
+##    print('Вы ввели не число')
+#
+#
+## a = int(input())
+## b = int(input())
+## a, b = b, a
+## print(a, b)
+#
+## num_lesson = int(input())
+## lesson_duration = 45
+## even = 15
+## odd = 5
+## beginning_of_studies = 9 * 60  # минуты
+## odd_breaks = (num_lesson // 2) * 5
+## even_breaks = ((num_lesson - 1) // 2) * 15
+## minuts = beginning_of_studies + (num_lesson * lesson_duration + even_breaks + odd_breaks)
+##
+## print(minuts // 60, minuts % 60)
+#
+## rub = int(input())
+## pen = int(input())
+## pie = int(input())
+##
+## price = (pie * (rub + pen / 100))
+## print(int(price // 1), int(round(price % 1, 2) * 100))
+#
+# my_str = 'один'  'два' 'три'
+# print(my_str)
+#
+# print("Hello\nWorld")  # Перевод строки
+# print("Name:\tJohn")   # Горизонтальная табуляция
+# print("C:\\Users\\User")  # Обратный слэш
+# print("She said, \"Hello\"")  # Двойные кавычки внутри строки
+# print('It\'s a pen')  # Одинарные кавычки внутри строки
+# print("\101")  # Восьмеричная нотация для символа 'A'
+# print("\x41")  # Шестнадцатеричная нотация для символа 'A'
+# print("\u03A9")  # Юникод для символа 'Ω'
+# print("\U0001F600")  # Юникод для эмодзи '😊'
+# print('\u0024')
+##with open("output.txt", "w") as f:
+##    print("This will be written to a file.", file=f)
+#
+##mport time
+##hile True:
+##   for i in range(50):
+##       print(i, end=" ", flush=True)
+##       time.sleep(0.5)  # Задержка в 1 секунду
+## Выведет числа по одному с интервалом в 1 секунду
+# num=9.122222458096283471237
+# print(f"{num:.0f}")
+# Эта программа наносит звезды созвездия Ориона,
+# названия звезд и линии созвездия.
+
+# from time import sleep
+##turtle.done()
+
+# word = 'qwerty'
+# x=set(['RUS' if ord(char) > 127 else 'ENG' for char in word])
+# print('Error' if len(x)>1 else list(x)[0])
+# word = 'йцукен'
+# x=set(['RUS' if ord(char) > 127 else 'ENG' for char in word])
+# print('Error' if len(x)>1 else list(x)[0])
+# word= 'qwertфыву'
+# x=set(['RUS' if ord(char) > 127 else 'ENG' for char in word])
+# print('Error' if len(x)>1 else list(x)[0])
+#
+# word = 'fadfфыпф'
+# print('Error' if {'RUS' if ord(c) > 127 else 'ENG' for c in word} == {'RUS', 'ENG'} else 'RUS' if any(ord(c) > 127 for c in word) else 'ENG')
+# print('Error' if any(ord(c) > 127 for c in word) and any(ord(c) <= 127 for c in word) else 'RUS' if any(ord(c) > 127 for c in word) else 'ENG')
+
+# print("ENG" if (a:= input()) == "qwerty" else "РУС" if a == "йцукен" else "")
+
+# print((num := 1234) % 10 + num // 10 % 10 + num // 100 % 10 + num // 1000 % 10)
+# print(reduce(lambda x, y: x+y, list(map(int,'1234'))))
+
+# try:
+#    print(sum(list(map(int, input()))))
+# except ValueError:
+#    print('Вы ввели не число')
+
+# def is_invalid(mod_num):
+#    if mod_num != 100 and mod_num != 200 and mod_num != 300:
+#        status = True
+#    else:
+#        status = False
+#    return status
+# print(is_invalid(100))
+#
+# with open(r'C:\python\1025\setting1.txt') as f:
+#    for line in f.readlines():
+#        if line=='' or line=="\n":
+#            pass
+#        print(line[:-1])
+
+#
+# from learnOOP.Практика import list_num
+#
+#
+
+
+# print('ENG' if (word:=input()) == 'qwerty' else ('РУС' if word == 'йцукен' else ''))
+# print('YES' if (num := int(input())) > 0 else ("NO" if num < 0 else ''))
+
+# nums = [1, -2, 3, 5]
+# print(next(n for n in range(1, max(list(filter(lambda x: x > 0, nums)))) if n not in nums))
+# print(list(filter(lambda x: x > 0, nums)))
+# print(list(map(lambda x:x**x,nums)))
+# print((-2)**-2)
+# lvl=2
+# match lvl:
+#    case 1:print('лвл1')
+#    case 2:print('лвл2')
+
+
+# def get_numbers(numbers: int):
+#    """ """
+#    return 'YES' if (numbers > 0) else ("NO" if numbers < 0 else '')
+# while True:
+#    print(get_numbers(int(input())))
+
+# num = int(input("Введите число: "))
+# print(['NO','YES','' ][1 if num >= 1 else (0 if num <= -1 else 2)])
+
+# def get_9(num: int):
+#    print("YES" if (len(str(num)) == 2) and num % 10 == num // 10 else "NO")
+#    print(-11%10)
+
+#    get_9(abs(int(input())))
+
+#    num = abs(int(input()))
+#    print("YES" if (len(str(num)) == 2) and num % 10 + num // 10 > 10 else "NO")
+#    num = abs(int(input()))
+#    print("YES" if (len(str(num)) == 2) and (num % 10) % 2 == 0 and (num // 10) % 2 == 0 else "NO")
+
+# while 1:
+#    num = abs(int(input()))
+#    print('YES' if len(str(num)) == 3 and num // 100 + num % 10 == num // 10 % 10 else 'NO')
+# while 1:
+#    num = abs(int(input()))
+#    print('YES' if len(str(num)) == 3 and num // 100 == num % 10 == num // 10 % 10 else 'NO')
+
+# num_1, num_2, num_3 = map(int, [input() for _ in range(3)])
+# print('YES' if num_1 == num_2 == num_3 else 'NO')
+
+# num_1, num_2, num_3 = map(abs, map(int, [input() for _ in range(3)]))
+# num_1, num_2, num_3 = abs(int(input())), abs(int(input())), abs(int(input()))
+# print('YES' if num_1 == num_2 or num_1 == num_3 or num_2 == num_3 else 'NO')
+
+# print('YES' if any([num_1 == num_2, num_1 == num_3, num_2 == num_3]) else 'NO')
+# print('YES' if len(set([num_1, num_2, num_3]))==2 else 'NO')
+
+# num_1, num_2, num_3 = abs(int(input())), abs(int(input())), abs(int(input()))
+# if num_1 == num_2:
+#    print(num_3)
+# elif num_1 == num_3:
+#    print(num_2)
+# elif num_2 == num_3:
+#    print(num_1)
+#
+# print(num_3 if num_1 == num_2 else (num_2 if num_1 == num_3 else (num_1 if num_3 == num_2 else '')))
+
+# print(next(filter(lambda x: lst.count(x)==1, lst),'Карл, это провал!!!'))
+
+# print('YES' if int((num := input())) % 2 == 0 and len(num) == 3 else "NO")
+# print('YES' if int(num := input())
+# for num in range(1999):
+#   print('YES' if num % 4 == 0 and num % 100 != 0 or num % 400 == 0 else 'NO')
+
+# num_1, num_2, num_3, num_4 = map(int, [input() for _ in range(4)])
+# if num_1 <= num_2 and num_1 <= num_3 and num_1 <= num_4:
+#    print(num_1)
+# elif num_2 <= num_1 and num_2 <= num_3 and num_2 <= num_4:
+#    print(num_2)
+# elif num_3 <= num_1 and num_3 <= num_2 and num_3 <= num_4:
+#    print(num_3)
+# elif num_4 <= num_1 and num_4 <= num_2 and num_4 <= num_3:
+#    print(num_4)
+
+# print(min([num_1, num_2, num_3, num_4]))
+
+
+# num_1, num_2, num_3 = map(int, [input() for _ in range(3)])
+# result = 0
+# if num_1 > 0:
+#    result += num_1
+# if num_2 > 0:
+#    result += num_2
+# if num_3 > 0:
+#    result += num_3
+# print(result)
+#
+## print(sum(filter(lambda x: x>0,[num_3,num_2,num_1])))
+
+# pos_X, pos_Y, move_X, move_Y = map(int, [input() for _ in range(4)])
+# print('YES' if pos_X == move_X or pos_Y == move_Y  else 'NO')
+
+# pos_X, pos_Y, move_X, move_Y = map(int, [input() for _ in range(4)])
+# print('YES' if -1 <= (pos_X - move_X) <= 1 and -1 <= (pos_Y - move_Y) <= 1 else 'NO')
+# while 1:
+#    pos_X, pos_Y, move_X, move_Y = map(int, [input() for _ in range(4)])
+#    print('YES' if (pos_X + pos_Y) % 2 == 0 and  (move_X + move_Y) % 2 == 0  else 'NO')
+# def product(*iterables, repeat=1):
+#    pools = [tuple(pool) for pool in iterables] * repeat
+#    def _product(index):
+#        if index == len(pools):
+#            yield ()
+#            return
+#        for item in pools[index]:
+#            for result in _product(index + 1):
+#                yield (item,) + result
+#
+#    return _product(0)
+#
+## Тестирование функции
+# result = product([1, 2], ['a', 'b'])
+# print(list(result))  # [(1, 'a'), (1, 'b'), (2, 'a'), (2, 'b')]
+
+
+# summa=0
+# for i in range(int(input())):
+#  num = int(input())
+#  if num > 10 and (num//10 * (num%10))>35:
+#    summa+=num
+# print(summa)
+
+
+# print(sum(filter(lambda x: x > 10 and (x // 10 * (x % 10)) > 35, [int(input()) for _ in range(int(input()))])))
+
+# start, stop = int(input()), int(input())
+# [print(i, end=" ") for i in range(start - (start + 1) % 2, stop - 1, -2)]
+# map(print(i, end=" "),i for i in range(start - (start + 1) % 2, stop - 1, -2)
+
+# for _ in range(2):
+#    print(int(input())*"*")
+
+# [print((num:=int(input())*'*') if i==0 else num) for i in range(2)]
+
+# list(map(lambda x: print(x, end=' '),range((start:=int(input())) - (start + 1) % 2, stop:=int(input()), -2)))
+
+# for i in range(1, int(input()) + 1):
+#    print(i, end="")
+# list(map(lambda x: print(x, end=""), [i for i in range(1, int(input()) + 1)]))
+
+
+# num = int(input())
+# if num <= 100:
+#    for i in range(int((num+1)/2)):
+#        print('35',end='')
+
+# [
+#    print("не более 100")
+#    if num >= 100
+#    else [print("35", end="") for i in range(int((num + 1) / 2))]
+# ]
+# [
+#    print("не более 100")
+#    if num >= 100
+#    else [print("35", end="") for i in range(int((num + 1) / 2))]
+# ]
+# if (num := int(input())) <= 100:
+#    list(map(lambda _: print("35", end=""), [i for i in range(int((num + 1) / 2))]))
+
+# list(map(lambda x: print("35", end=""),arr))
+
+# for i in range(int(input()) + 1):
+#    if i % 2:
+#        print(i, end="")
+# list(map(lambda x: print(x, end=""), [i for i in range(int(input()) + 1) if i % 2 != 0]))
+
+# summa = 0
+# num_a, num_b = int(input()), int(input())
+# if num_a > num_b or num_a < 100 and num_b < 100:
+#    for i in range(num_a, num_b + 1):
+#        summa += i
+#    print(summa)
+
+
+# summa = 0
+# num_a, num_b = int(input()), int(input())
+# if num_a > num_b or num_a < 100 and num_b < 100:
+#    for i in range(num_a, num_b + 1):
+#        summa += i
+#    print(summa)
+#
+## print(sum(i for i in range(int(input()), int(input()) + 1)))
+## print(sum([i for i in range(num_a, num_b + 1)] if (num_a:=int(input())) < (num_b:=int(input())) or num_a < 100 and num_b < 100 else None))
+# if (num_a := int(input())) < (num_b := int(input())) and (num_a < 100 and num_b < 100):
+#    print(sum([i for i in range(num_a, num_b + 1)]))
+
+
+# for i in range(1, (n := int(input())) + 1):
+#    if n % i == 0:
+#        print(i)
+# if (n := int(input())) > 0:
+#    list(map(lambda x: print(x), [i for i in range(1, n + 1) if n % i == 0]))
+#
+
+# num=int(input())
+# if num<100:
+#    for i in range(num,0,-1):
+#        print(i,end=' ')
+# if (num := int(input())) > 0:
+#    list(map(lambda x: print(x,end=' '), [i for i in range(num, 0, -1)]))
+
+
+# summa = 0
+# for i in range(int(input())):
+#    num = int(input())
+#    if num % 3 == 0 and str(num).endswith("2"):
+#        summa += 1
+# print(summa)
+# print(sum(1 for _ in range(int(input())) if (num := input()).endswith("2") and int(num) % 3 == 0))
+
+
+# summa = 0
+# for i in range(int(input())):
+#   num = int(input())
+#   if num > 10 and (num // 10 * (num % 10)) > 35:
+#       summa += num
+# print(summa)
+
+# print(sum(filter(lambda x: x > 10 and (x // 10 * (x % 10)) > 35, [int(input()) for _ in range(int(input()))])))
+# result = 'NO'
+# for i in range(int(input())):
+#    if int(input()) == 5:
+#        result = 'YES'
+# print(result)
+# print(['NO', 'YES'][sum([1 if int(input()) == 5 else 0 for i in range(int(input()))])])
+
+
+# Напишите программу, которая запрашивает числа A и B (A<B), и находит сумму только
+# чётных двузначных чисел в диапазоне от A до B включительно, у которых сумма цифр меньше 12.
+
+# num_a, num_b, summa = int(input()), int(input()), 0
+# if num_a < num_b:
+#    for i in range(num_a, num_b + 1):
+#        if len(str(i)) == 2 and i % 2 == 0 and i // 10 > 0 and i % 10 >= 0 and (i // 10 + i % 10) < 12:
+#            summa += i
+#    print(summa)
+
+# if (num_a := int(input())) < (num_b := int(input())):
+#    print(sum(i for i in range(num_a, num_b + 1) if 10 <= i <= 99 and i % 2 == 0 and (i // 10 + i % 10) < 12))
+
+# num, summa = int(input()), 0
+# for i in range(num):
+#    if i % 3 == 0 or i % 5 == 0:
+#        summa += i
+# print(summa)
+
+# print(sum(i for i in range(int(input())) if i % 3 == 0 or i % 5 == 0))
+
+#:
+#    for i in range(num,0,-1):
+#        print("*"*i)
+
+# list(map(lambda x: print("*" * x), range(num, 0, -1)) if (num := int(input())) >= 2 else None)
+
+# start, stop = 1, int(input())
+# while start ** 2 < stop+1:
+#    print(start ** 2)
+#    start += 1
+
+# list(map(lambda x: print( x ** 2) ,filter(lambda x: x ** 2 < stop, range(1, (stop := int(input()) + 1)))))
+
+# start, stop, = 2, int(input())
+# if stop >= 2:
+#    while (stop % start != 0) and start < stop:
+#        start += 1
+#    print(start)
+
+# print(next(filter(lambda x: stop % x == 0, range(2, (stop := int(input())))),None))
+
+
+# x, y, days = int(input()), int(input()), 1
+## while x < y:
+##    x = (x + 0.1 * x)
+##    days += 1
+## print(days)
+# num=int(input())
+# print(range(int(num + 0.1 * num)), int(input()) + 1)
+## print(len(map(lambda x: x = (x + 0.1 * x),)))
+#
+# print([i for i in range (x,y)])
+
+# nums, counter, end = input(), True, 0
+#
+# for i in range(len((nums))):
+#    while i >= 0:
+#        print(i)
+#        if counter:
+#            end += 1
+#        if i == 0:
+#            break
+# print(end)
+
+
+# Программа получает на вход последовательность целых неотрицательных чисел,
+# каждое число записано в отдельной строке. Последовательность завершается числом 0,
+# при считывании которого программа должна закончить свою работу и
+# вывести количество членов последовательности (не считая завершающего числа 0).
+# Числа, следующие за числом 0, считывать не нужно.
+
+# num = int(input())
+# counter = 0
+# while num != 0:
+#    counter += 1
+#    num = int(input())
+# print(counter)
+
+# print(sum(1 for _ in iter(lambda: int(input()), 0)))
+
+
+# x, y, days = int(input()), int(input()), 1
+# while x < y:
+#    x = (x + 0.1 * x)
+#    days += 1
+# print(days)
+#
+# x, y = float(input("Начальное расстояние: ")), float(input("Целевое расстояние: "))
+# print(next(iter(lambda: (x * 1.1) < y, y)))
+# print(sum(1 for _ in iter(lambda: (x * 1.1) < y, False)))
+
+# num_1, num_2 = int(input()), 0
+# while num_1 != 0:
+#    if num_1 > num_2:
+#        num_2 = num_1
+#    num_1 = int(input())
+# print(num_2)
+
+
+# num_1, num_2, max_index, counter = int(input()), 0, -1, -1
+# while num_1 != 0:
+#    counter += 1
+#    if num_1 > num_2:
+#        num_2 = num_1
+#        max_index = counter
+#    num_1 = int(input())
+# print(max_index)
+
+# print(max([(v,i) for i,v in enumerate(iter(lambda: int(input()), 0))])[1])
+
+# num_1, num_2, end = 1, 0, int(input())
+# if end <= 100:
+#    while end != 0:
+#        end -= 1
+#        if num_1 > num_2:
+#            print(num_1, end=' ')
+#            num_2 += num_1
+#        else:
+#            num_1 += num_2
+#            print(num_2, end=' ')
+#
+# a, b = 1, 0
+# for _ in range(int(input())):
+#    print(a, end=' ')
+#    a, b = a + b, a
+
+# max_1, max_2 = 0, 0
+# for _ in range(int(input())):
+#    num = int(input())
+#    if num > max_1:
+#        max_2 = max_1
+#        max_1 = num
+#    elif num > max_2:
+#        max_2 = num
+# print(max_1, max_2, sep='\n')
+
+# end, itr = 'YES', 0
+# while itr < 10:
+#    if int(input()) / 2 == 0:
+#        end = "NO"
+#    itr += 1
+# print(end)
+
+
+# print(['YES','NO'][any(1 for _ in range(10) if int(input()) % 2 == 0) ])
+# print("NO" if any(1 for _ in range(10) if int(input()) % 2 != 0) else 'YES')
+
+# num, k, counter = int(input()), 0, 0
+# while num != 0:
+#    if num > k:
+#        counter = 1
+#        k = num
+#    elif k == num:
+#        counter += 1
+#    num = int(input())
+# print(counter)
+
+# numbers = list(i for i in (iter(lambda: int(input()), 0)))
+# print(numbers.count(max(numbers)))
+
+# start, stop = 1, int(input())
+# while start ** 2 < stop+1:
+#    print(start ** 2)
+#    start += 1
+
+# x, y, days = int(input()), int(input()), 1
+# while x < y:
+#    x = (x + 0.1 * x)
+#    days += 1
+# print(days)
+
+# print(list(range(start := 10)))
+# print(list(map(lambda x: int(x + 0.1 * x), (range(start := int(input()), stop := int(input()),(start + 0.1 * start))))))
+# print(list(filter( lambda x: x < stop, (map( lambda x: int(x + 0.1 * x),(range(start := int(input()), stop := int(input()))))))))
+
+# print(string[:3] if len(string:= input())>3 else string)
+
+# print((string := input())[:3] or string)
+
+# print(string[-3:] if len(string:= input())>3 else string)
+# print((string := input())[-3:] or string)
+
+# print(string[1:5] if len(string := input()) > 5 else string)
+# print(len(string := input()) > 5 and string[1:5] o)
+# print(string[1:-1:-1] if len(string := input()) > 5 else string)
+# print(len(string := input()) > 5 and string[1:5] or string)
+# while 1:
+# print((string := input())[-2:0:-1])
+# print((string := input())[0] + string[-2:0:-1] + string[-1])
+# last, fist, patr = input(), input(), input()
+# print((fist[0] + last[0] + patr[0]).upper())
+
+#  print(reduce(lambda x, y: x + y,(input()[0].upper() for _ in range(3))))
+# print(( Символ + встречается 4 раз {i}) for i in
+# chrs, string = ('+', '-'), input()
+# [print(f"Символ {char} встречается {string.count(char)} раз") for char in chrs]
+# print(sum(1 for i in range(len(string)-1) if (string:= input())[i]==string[i+1]))
+#   word = 'анекдот'  # , 'радар','папапап', 'потоп',
+#   print(["NO", 'YES'][all(list(word[i] == word[-i - 1] for i in range(len(word))))])
+# print('Четное' if (num := int(input())) % 2 == 0 else 'Нечетное')
+# num_1, num_2 = int(input()), int(input())
+# print(num_1 if num_1 < num_2 else num_2)
+# print('YES' if num_1 - num_2 == num_2 - num_3 else 'NO')
+
+
+# list_0 = list(map(int, [input() for _ in range(4)]))
+# for i in list_0:
+#    if i < k:
+#        k=i
+# print(k)
+#
+# list_0 = [5000, 7000, 3000, 9000]
+# k = min(list_0, default=10000)  # Если список пустой, вернется 10000
+#
+# print(k)
+
+# num = int(input())
+# print(
+#    'детство' if num <= 13 else ('молодость' if 14 <= num <= 24 else ('зрелость' if (25 <= num <= 59) else 'старость')))
+#
+# print(sum(filter(lambda x: x > 0, map(int, [input() for _ in range(3)]))))
+# num = int(input())
+# print("Принадлежит" if num <= -3 or num >= 7 else "Не принадлежит")
+
+# num = int(input())
+# print(['NO', 'YES'][1 if len(str(num)) == 4 and num % 7 == 0 or num % 17 == 0 else 0])
+
+# num_1, num_2, num_3 = int(input()), int(input()), int(input())
+# print('YES' if num_1 + num_2 > num_3 and num_1 + num_3 > num_2 and num_2 + num_3 > num_1 else 'NO')
+
+# num = int(input())
+# print('YES' if num % 4 == 0 and num % 100 != 0 or num % 400 == 0 else 'NO')
+
+# start_x, start_y, end_x, end_y = map(int,[input() for _ in range(4)])
+
+
+# a, b = int(input()), int(input())
+# print(f'Квадрат суммы {a} и {b} равен {(a + b) ** 2}')
+# print(f'Сумма квадратов {a} и {b} равна {a ** 2 + b ** 2}')
+# a, b, c = map(int, [input() for _ in range(3)])
+# if a == b == c:
+#    print('Равносторонний')
+# elif a != b != c:
+#    print('Разносторонний')
+# elif a == b or a == c or b == c:
+#    print('Равнобедренный')
+
+# a, b, c = map(int, [input() for _ in range(3)])
+# if a < b < c or a >= b >= c:
+#    print(b)
+# elif b < a < c or b >= a >= c:
+#    print(a)
+# elif a < c < b or a >= c >= b:
+#    print(c)
+
+# num = int(input())
+# if num == 2:
+#    print(28)
+# elif num == 4 or num == 6 or num == 9 or num == 11:
+#    print(30)
+# else:
+#    print(31)
+
+# num_1, num_2, znak = int(input()), int(input()), input()
+# if num_2 == 0 and znak == '/':
+#    print('На ноль делить нельзя!')
+# elif znak == '+':
+#    print(num_1 + num_2)
+# elif znak == '-':
+#    print(num_1 - num_2)
+# elif znak == '*':
+#    print(num_1 * num_2)
+# elif znak == '/':
+#    print(num_1 / num_2)
+
+# c_1, c_2 = input(), input()
+
+# if c_1 == c_2 and (c_1 in {'красный', 'синий', 'желтый'}):
+#    print(c_1)
+# elif {c_1, c_2} == {'красный', 'синий'}:
+#    print('фиолетовый')
+# elif {c_1, c_2} == {'красный', 'желтый'}:
+#    print('оранжевый')
+# elif {c_1, c_2} == {'желтый', 'синий'}:
+#    print('зеленый')
+# else:
+#    print('ошибка цвета')
+
+# num = int(input())
+# if num == 0:
+#    print('зеленом')
+# elif 1 <= num <= 10:
+#    if num % 2 == 0:
+#        print('черный')
+#    else:
+#        print('красный')
+# elif 11 <= num <= 18:
+#    if num % 2 == 0:
+#        print('красный')
+#    else:
+#        print('черный')
+# elif 19 <= num <= 28:
+#    if num % 2 == 0:
+#        print('черный')
+#    else:
+#        print('красный')
+# elif 29 <= num <= 28:
+#    if num % 2 == 0:
+#        print('красный')
+#    else:
+#        print('черный')
+#
+
+# 9
+# 21
+# 7
+# 81
+
+
+# a1, b1, a2, b2 = int(input()), int(input()), int(input()), int(input())
+# if min(b1, b2) < max(a1, a2):
+#    print('пустое множество')
+# elif min(b1, b2) == max(a1, a2):
+#    print(min(b1, b2))
+# else:
+#    print(max(a1, a2), min(b1, b2))
+#
+# a1, b1, a2, b2 = int(input()), int(input()), int(input()), int(input())
+# print(*{max(a1, a2), min(b1, b2)} if not(a2 > b1 or a1 > b2) else ['пустое множество'])
+# print(*list([1,2,3,4]))
+#
+
+
+# a1, b1, a2, b2 = int(input()), int(input()), int(input()), int(input())
+# if (b1 == a2):
+#    print(b1)
+# elif (b2 == a1):
+#    print(b2)
+# elif (b1 < a2 or b2 < a1):
+#    print("пустое множество")
+# else:
+#    print(max(a1, a2), min(b1, b2))
+
+
+# string = input()
+# print(sum(1 for i in range(len(string) - 1) if string[i] == string[i + 1]))
+
+
+# string = input()
+# print(sum(1 for a, b in zip(string, string[1:]) if a == b))
+# print(["NO", 'YES'][all(list(word[i] == word[-i - 1] for i in range(len(word))))])
+
+# print('YES' if all(1 if a == b else 0 for a, b in zip(word, word[::-1])) else 'NO')
+
+# print(list(i for i in zip(word[:int(len(word)/2):-1], word[:int(len(word)/2):-1])))
+
+
+# word = input()
+# start_stop = math.ceil(len(word) / 2)
+# print(word[start_stop::] + word[:start_stop])
+
+
+# word = 'abcde'
+# start_stop = int(len(word) / 2) if len(word) % 2 == 0 else len(word) // 2 + 1
+# print(word[start_stop::] + word[:start_stop])
+# print(' '.join(line.split(' ')[::-1]))    #
+# while 1:
+# print(-1 if line.count('f') == 1 else (-2 if line.count('f') == 0 else )
+
+
+# print({0: -2, 1: -1}.get(line.count('f'), line.find('f', line.find('f') + 1)))
+
+# print(line[:line.find('h')] + line[line.rfind('h') + 1:])
+# print(line.replace('@',''))
+
+# print(''.join(map(lambda x: x.replace(x, '') if line.index(x) % 3 == 0 else x, line)))
+
+# result = 0
+# for i in line:
+#    if i.isalpha() and i==i.lower():
+#        result+=1
+# print(result)
+
+# print(sum(1 for i in line if i.isalpha() and i == i.lower()))
+# char = input()
+# print('YES' if char.isdigit() else 'NO')
+
+# print(*reversed(max((len(i), i) for i in line.split(' '))), sep='\n')
+
+
+# line, ad, ti, gu, ci = input().lower(), 0, 0, 0, 0
+# for i in line:
+#    if i == 'а':
+#        ad = line.count(i)
+#    elif i == 'т':
+#        ti = line.count(i)
+#    elif i == 'г':
+#        gu = line.count(i)
+#    elif i == 'ц':
+#        ci = line.count(i)
+# print(f"Аденин: {ad}", f"Гуанин: {gu}", f"Цитозин: {ci}", f"Тимин: {ti}", sep="\n")
+
+# print(list(map(lambda x:list(reversed(x)), set((line.count(i) ,i) for i in line.lower()))))
+# line, elm_dict = input().lower(), {}
+
+
+# print(f"Аденин: {elm_dict.get('а', 0)}", f"Гуанин: {elm_dict.get('г', 0)}", f"Цитозин: {elm_dict.get('ц', 0)}",
+#      f"Тимин: {elm_dict.get('т', 0)}")
+
+# num_1, num_2 = int(input()), int(input())
+# [print(chr(i), end=' ') for i in range(num_1, num_2 + 1)]
+
+# [print(ord(i), end=' ') for i in input()]
+
+# num, line, new_line = int(input()), input(), ''
+# if 1 <= num <= 25:
+#    for i in line:
+#        new_line += chr(ord(i) - num + 26) if ord(i) - num < 97 else chr(ord(i) - num)
+# print(new_line)
+
+
+# 5
+# 2
+# 5
+# 8
+
+# pos_x, pos_y, move_x, move_y = map(int, [input() for _ in range(4)])
+# print(abs(pos_x - move_x), abs(pos_y - move_y))
+# print(abs(pos_x - move_x) == 0 )
+# if (abs(pos_x - move_x) == 0 or abs(pos_y - move_y) == 0) or abs(pos_x - move_x) == abs(pos_y - move_y) :
+#    print("YES")
+# else:
+#    print("NO")
+
+# print(*input().split()[::2])
+
+
+# print(*[max(list_num) if i == min(list_num) else (min(list_num) if i == max(list_num) else i) for i in list_num],sep='\n')
+
+# list_num = list(map(int, [i for i in iter(lambda: input(), '0')]))
+# min_index = list_num.index(min(list_num))
+# max_index = list_num.index(max(list_num))
+# list_num[min_index], list_num[max_index] = list_num[max_index], list_num[min_index]
+# print(*list_num, sep='\n')
+
+# n1, n2 ,n3 = [input() for _ in range(3)]
+# n1_l, n2_l,n3_l = len(n1), len(n2) ,len(n3)
+# max=max(max(n1_l, n2_l) ,n3_l)
+# min=min(min(n1_l, n2_l),n3_l)
+# print(n1 if n1_l == min else n2 if n2_l == min else n3 , n1 if n1_l == max else n2 if n2_l == max else n3 if n3_l == max else '' ,sep='\n')
+
+
+# list_num = list(map(int, input().split(' ')))
+# for v in range(len(list_num) - 1):
+#    if list_num[v] < list_num[v + 1]:
+#        print(list_num[v + 1], end=' ')
+
+# print(*[b for a, b in zip(list_num, list_num[1:]) if a < b], end=' ')
+#
+# print(*list(map(lambda a: a[1], filter(lambda zip_tpl: zip_tpl[0] < zip_tpl[1], zip(list_num, list_num[1:])))), end=' ')
+
+# list_num = list(map(int, input().split(' ')))
+# for v in range(len(list_num) - 1):
+#    if list_num[v] > 0 and list_num[v + 1] > 0 or list_num[v] < 0 and list_num[v + 1] < 0:
+#        print(list_num[v], list_num[v + 1], end=' ')
+#        break
+#
+# print(next(f'{a} {b}' for a, b in zip(list_num, list_num[1:]) if (a > 0 and b > 0) or (b < 0 and b < 0)), end=' ')
+#
+# print(next(f'{a} {b}' for a, b in zip(list_num, list_num[1:]) if a * b > 0), end=' ')
+
+# list1,list2 = [5, 20, 15, 20, 25, 50, 20],[]
+# for i in range(len(list1) - 1):
+#    if list1[i] != 20:
+#        list2.append(list1[i])
+# print(list2)
+#
+# print(list(filter (lambda i: i != 20, list1)))
+
+# list1 = [5, 10, 15, 20, 25, 50, 20]
+# for i in range(len(list1) - 1):
+#    if list1[i] == 20:
+#        list1[i] = 200
+#        break
+# print(list1)
+#
+# found = False
+# print(list(map(lambda x: 200 if x == 20 and not (found := True) else x, list1)))
+
+# aList = [100, 200, 300, 400, 500]
+# aList.sort(reverse=True)
+# print(aList)
+#
+# print(sorted(aList, reverse=True))
+
+
+# line, count = [1, 2, 3, 2, 1, 4, 2, 6, 6], 0
+# for a, b, c in zip(line, line[1:], line[2:]):
+#    print(a, b, c)
+#    if a < b > c:
+#        count += 1
+# print(count)
+#
+# print(sum(1 for a, b, c in zip(line, line[1:], line[2:]) if a < b > c))
+# print(sum(1 for i in range(len(line)-2) if line[i] < line[i + 1] > line[i + 2]))
+
+# line = list(input().split(' '))
+# print(sum(1 for a, b, c in zip(line, line[1:], line[2:]) if a < b > c))
+
+
+# line, height_p = list(map(int, input().split(' '))), int(input())
+#
+# if all(i for i in line if i < 200):
+#    for i in line:
+#        if i > height_p:
+#            continue
+#        else:
+#            print(line.index(i) + 1)
+#            break
+#
+# print(sum([i // height_p != 0 for i in line]) + 1)
+
+# print(list(map(lambda x: x/height_p)))
+
+
+# print(len(set(list(map(int,input().split(' '))))))
+# line = list(map(int,input().split(' ')))
+# for i in line:
+#    if line.count(i) != 1:
+#        line.remove(i)
+# print(len(line))
+
+
+# line = list(map(int, input().split(' ')))
+# for i in range(0, len(line) - 1, 2):
+#    line[i], line[i + 1] = line[i + 1], line[i]
+
+# print(*list(f"{b} {a}" if type(b) == int else f"{a}" for a, b in zip(line[::2], line[1::2] + [None])))
+# 5 3 7 4 6
+
+# line = list(map(int,input().split()))
+# k=int(input())
+#
+# new_line = [0] * len(line)
+# for i in range(len(line)):
+#    new_line[(i + k) % len(line)] = line[i]
+# print(*new_line)
+# print(*[line[(i - k) % len(line)] for i in range(len(line))])
+# print([(i+(i//100-1)) for i in range(101,1000,10)])
+
+# l = [3, 1, 4]
+# m = [1, 5, 9]
+# new=[]
+# for i in l:
+#    new+=[i+m[l.index(i)]]
+# print(new)
+#
+# print(*[i+j for i,j in zip(l,m)])
+# print(*[i+m[l.index(i)] for i in l])
+
+# import re
+# line = '3014475820'
+# print('YES' if re.findall(r'\d{1}-\d{3}-\d{3}-\d{4}|\d{3}-\d{3}-\d{4}', line) else 'NO')
+
+# try:
+#    # 7-301-447-5820
+#    line = input().split('-')
+#    if '7' == line[0]:
+#        line.pop(0)
+#    isdigit = all([True if i.isdigit() else False for i in line])
+#    if isdigit and len(line[0]) == 3 and len(line[1]) == 3 and len(line[2]) == 4:
+#        print('YES')
+#    else:
+#        raise Exception
+# except Exception:
+#    print('NO')
+
+
+# pos = [list(map(int, input().split())) for _ in range(8)]
+
+# mirror_duplicates, seem_line_or_col = False, False
+
+# 1 8
+# 2 7
+# 3 6
+# 4 5
+# 5 4
+# 6 3
+# 7 2
+# 8 1
+
+# diagonal, row_or_col = False, False
+# for i in range(len(pos)):
+#    for j in range(len(pos)):
+#        if i == j:
+#            continue
+#        if pos[i][0] == pos[j][0] or pos[i][1] == pos[j][1]:
+#            row_or_col = True
+#
+#        elif pos[i][0] - pos[i][1] == pos[j][0] - pos[j][1] or pos[i][0] + pos[i][1] == pos[j][0] + pos[j][1]:
+#            diagonal = True
+#
+# print("YES") if diagonal or row_or_col else print("NO")
+
+# list1 = ['a', 'b', ['c', ['d', 'e', ['f', 'g'], 'k'], 'l'], 'm', 'n']
+# sub_list = ['h', 'i', 'j']
+##['a', 'b', ['c', ['d', 'e', ['f', 'g', 'h', 'i', 'j'], 'k'], 'l'], 'm', 'n']
+# list1[2][1][2].extend(sub_list)
+# print(list1)
+
+# def pascal_triangle(n):
+#    triangle = []  # Список для хранения строк треугольника
+#
+#    for i in range(n):
+#        row = [1] * (i + 1)  # Создаем строку из единиц
+#        for j in range(1, i):  # Заполняем внутренние элементы
+#
+#            row[j] = triangle[i - 1][j - 1] + triangle[i - 1][j]
+#        triangle.append(row)  # Добавляем строку в треугольник
+#
+#    return triangle
+
+# def pascal(n):
+#    result = []
+#    for i in range(n + 1):
+#        row = (i + 1) * [1]
+#        for j in range(i):
+#            if j == 0 or j == i:
+#                continue
+#            row[j] = result[i - 1][j - 1] + result[i - 1][j]
+#        result.append(row)
+#    # print(*result,sep='\n')
+#    print(result[-1])
+
+
+# pascal(int(input()))
+
+# a, b = int(input()), int(input())
+# print(sum([1 for i in range(a, b + 1) if (i ** 3) % 10 == 4 or (i ** 3) % 10 == 9 ]))
+#
+# my_list = list(range(1,int(input())+1))
+# result = 1
+# for num in my_list:
+#    result *= num
+# print( result)
+
+# result = 1; [result := result * x for x in [int(input()) for _ in range(10)] if x != 0]; print(result)
+
+
+# n = int(input())
+# m,m2,k=0,0,0
+# for i in list(map(int,[input() for _ in range(1,n+1)])):
+#    if i >= m:
+#        k=m
+#        m=i
+#    if m2<=k:
+#        m2=k
+# print(m,m2,sep='\n')
+
+# num = int(input())
+# for i in range(0, num + 1):
+#    print(i)
+
+# size=0
+# while True:
+#    line = input()
+#    if line in  ('стоп', 'хватит', 'достаточно'):
+#        break
+#    size+=1
+# print(size)
+
+# def input_until_multiple_of_7():
+#    while True:
+#        x = int(input())
+#        if x % 7 != 0:
+#            break
+#        yield x
+#
+# print(*list(input_until_multiple_of_7()))
+
+# li=[]
+# while True:
+#    x = int(input())
+#    if  x<1 and x>6:
+#        break
+#    li.append(x)
+# print(li.count(5))
+
+
+# num = int(input())
+# coin = 0
+# while True:
+#    if num - 25 >= 0:
+#        num -= 25
+#    elif num - 10 >= 0:
+#        num -= 10
+#    elif num - 5 >= 0:
+#        num -= 5
+#    elif num - 1 >= 0:
+#        num -= 1
+#    else:
+#        break
+#    coin += 1
+# print(coin)
+
+# num = 123456789
+# total = 0
+# while num != 0:
+#    last_digit = num % 10
+#    if last_digit > 4:
+#        total += 1
+#
+#    num = num // 10
+#
+# print(total)
+
+# def arithmetic(val_1, val_2, exe):
+#    if exe == '+':
+#        return val_1 + val_2
+#    elif exe == '-':
+#        return val_1 - val_2
+#    elif exe == '/':
+#        return val_1 / val_2
+#    elif exe == '*':
+#        return val_1 * val_2
+#    else:
+#        return 'Invalid operation'
+#
+#
+# a, b, ex = input().split(' ')
+# print(arithmetic(int(a), int(b), ex))
+#
+# import re
+
+# def season(month):
+#    if month in (12, 1, 2):
+#        return 'зима'
+#    elif month in (3, 4, 5):
+#        return 'весна'
+#    elif month in (6, 7, 8):
+#        return 'лето'
+#    elif month in (9, 10, 11):
+#        return 'осень'
+# while True:
+#    print(season(int(input())))
+
+
+# def arithmetic(a: str, b: str, ex: str) -> float:
+#    return 'ZeroDivisionError' if a in ('0', '0.0') and '/' == ex else eval(f'{a}{ex}{b}')
+#
+#
+# try:
+#    a, b, ex = re.findall(r'\d+|\*\*|//|[+\-*/%]', input())
+#    print(arithmetic(a, b, ex))
+# except ValueError:
+#    print('Invalid operation')
+#
+# def get_season(month):
+#    match month:
+#        case 12 | 1 | 2:
+#            return 'зима'
+#        case 3 | 4 | 5:
+#            return 'весна'
+#        case 6 | 7 | 8:
+#            return 'лето'
+#        case 9 | 10 | 11:
+#            return 'осень'
+#
+#
+# print(get_season(int(input())))
+
+# def del_rep(line):
+#    new_list = []
+#    line=line.split(' ')
+#    for i in line:
+#        if i not in new_list:
+#            new_list.append(i)
+#    return list(map(int,new_list))
+#
+#
+# print(*del_rep(input()))
+# def this_in(dep,num):
+#    dep=list(map(int,dep.split(' ')))
+#    return True if num in list(range(dep[0]+1,dep[1])) else False
+#
+#
+# print(this_in(input(), int(input())))
+
+
+# def is_prime(num):
+#    num = int(num)
+#    return False if num == 1 else all(num % i != 0 for i in range(2, num))
+#
+#
+# print(is_prime(input()))
+
+# def get_next_prime(num):
+#    num = int(num)
+#    for i in range(num+1,num+10):
+#        if all(i % j != 0 for j in range(2, i)):
+#                return i
+# print(get_next_prime(input()))
+
+# def get_next_prime(num):
+#    num = int(num)
+#    return next(i for i in range(num + 1, num + 10) if all(i % j != 0 for j in range(2, i)))
+#
+#
+# print(get_next_prime(input()))
+
+
+# def is_password_good(password):
+#    if len(password) < 8:
+#        return False
+#    elif not (any(i for i in password if i.isdigit())):
+#        return False
+#    elif not (any(i for i in password if i.isalpha())):
+#        return False
+#    elif not (any(i for i in password if i.upper().isalpha())):
+#        return False
+#    return True
+#
+#
+# print(is_password_good(input()))
+#
+# def is_one_away(word1, word2):
+#    return len(word1) == len(word2) and sum(1 for i, j in zip(word1, word2) if i != j) < 2
+#
+#
+# print(is_one_away(input(), input()))
+
+
+# def is_palindrome(text):
+#    text = [i.lower() for i in text if not (i in ' ,.!?-')]
+#    return not (any([a != b for a, b in zip(text, reversed(text))]))
+#
+#
+# print(is_palindrome(input()))
+#
+
+# (())()
+
+# def is_correct_bracket(text):
+#    return False if text[-1] == '(' or text.count('(') != text.count(')') else True
+#
+#
+# print(is_correct_bracket(input()))
+#
+# def convert_to_python_case(text):
+#    return ''.join(['_' + i.lower() if i == i.upper() and not i.isdigit() else i for i in text])[1:]
+#
+#
+# print(convert_to_python_case(input()))
+
+
+# def is_prime(num):
+#    num = int(num)
+#    return False if num == 1 else not(any(num % i == 0 for i in range(2, num)))
+#
+#
+# print(is_prime(input()))
+
+
+# def outer_function(x):
+#    def inner_function(y):
+#        return x + y  # Внутренняя функция использует переменную x из внешней функции
+#    return inner_function
+#
+# closure = outer_function(10)  # Создаем замыкание с x = 10
+# print(closure(5))  # 15, потому что x = 10 и y = 5
+# print(closure(3))  # 13, потому что x = 10 и y = 3
+#
+#
+# second = outer_function(20)
+# print(second(4))    # 24, потому что x = 20 и y = 4
+# print(second(14))   # 34, потому что x = 20 и y = 1
+#
+# def summa(a, b):
+#    return a + b
+# third = outer_function(summa(10, 20))
+#
+# print(closure(1))  # 11, потому что x = 10 и y = 1
+# print(second(8))   # 24, потому что x = 10 и y = 1
+# print(third(10))   # 40, потому что x= 30 и y = 10
+# print(third(5))    # 40, потому что x= 30 и y = 5
+#
+
+# x = 100  # Глобальная переменная
+# def outer_function(y,to_x):
+#    global x  # Используем глобальную переменную x
+#    x += to_x
+#    def inner_function(z):
+#
+#        print("Глобальная x:", x)  # Выведет значение глобальной переменной
+#        nonlocal y  # Используем nonlocal для переменной y
+#        y += x  # Изменяем nonlocal y
+#        print("Nonlocal y:", y)
+#        z+=y
+#        print("Inner z:", z)
+#    return inner_function
+# start = outer_function(50,100)
+# print("Глобальная x после outer_function:", x)
+# start(3)
+# start(70)
+
+# from collections.abc import Iterable
+#
+# def flatten(items: Iterable):
+#    for item in items:
+#        if isinstance(item, Iterable):
+#            yield from flatten(item)
+#        else:
+#            yield item
+#
+#
+# items = [[0, 1, 2], 3, 4, [[5], [6, 7]], [[[8]]], 9]
+# print(list(flatten(items)))
+
+
+# num = 5
+# [print('*' * (j + 1)) if j <= num // 2 else print('*' * (num - j)) for j in range(num)]
+#
+#
+#
+# n = int(input())
+#
+# for i in range(n):
+#    c1 , c2= (n // 2 + 1),  abs(n // 2 - i)
+#    cur_cnt = c1 - c2
+#    for j in range(cur_cnt):
+#        print("*", end="")
+#    print()
+
+# num = int(input())
+#
+# for i in range(1, num + 1):
+#    for j in range(1, i + 1):
+#        print(f'{i}', end='')
+#    print()
+
+# total = 0
+# for x in range(1, 19):
+#    for y in range(1, 19):
+#        for z in range(1, 19):
+#            if 28*x +30*y + 31*z == 365 :
+#                total += 1
+#                print('x =', x, 'y =', y, 'z =', z)
+# print('Общее количество натуральных решений =', total)
+# a , b, c, d, e
+import random
+
+# def game(player_bank=100, keep_play='Да', new_round=1):
+#     while keep_play:
+#         print('=' * 50 + f'Раунд: {new_round}' + '=' * 50)
+#         print(f'В банке на данный момент: {player_bank}')
+#         try:
+#             number, bet = int(input('Загадайте число (2-12) : ')), int(input('Сделайте ставку: '))
+#         except ValueError:
+#             print('Введите число!')
+#             continue
+#         if (1 < number < 13) and (bet <= player_bank):
+#             def draw_dice(number):
+#                 match number:
+#                     case 1:
+#                         print('''
+#                       ┏━━━┓
+#                      ┃     ┃
+#                     ┃   *   ┃
+#                      ┃     ┃
+#                       ┗━━━┛''')
+#                     case 2:
+#                         print('''
+#                           ┏━━━┓
+#                          ┃ *   ┃
+#                         ┃       ┃
+#                          ┃   * ┃
+#                           ┗━━━┛''')
+#                     case 3:
+#                         print('''
+#                           ┏━━━┓
+#                          ┃*    ┃
+#                         ┃   *   ┃
+#                          ┃    *┃
+#                           ┗━━━┛''')
+#                     case 4:
+#                         print('''
+#                               ┏━━━┓
+#                              ┃ * * ┃
+#                             ┃       ┃
+#                              ┃ * * ┃
+#                               ┗━━━┛''')
+#                     case 5:
+#                         print('''
+#                               ┏━━━┓
+#                              ┃ * * ┃
+#                             ┃   *   ┃
+#                              ┃ * * ┃
+#                               ┗━━━┛''')
+#                     case 6:
+#                         print('''
+#                              ┏━━━┓
+#                             ┃ * * ┃
+#                            ┃  * *  ┃
+#                             ┃ * * ┃
+#                              ┗━━━┛''')
+#
+#             draw_dice(dice_1 := random.randint(1, 6))
+#             draw_dice(dice_2 := random.randint(1, 6))
+#             if dice_1 + dice_2 == number:
+#                 player_bank += bet * 4
+#                 print(f'♡⸜(｡˃ ᵕ ˂)⸝ Вы выиграли! {bet * 4} Точное попадание! ⸜(˃ ᵕ ˂｡)⸝♡')
+#             elif dice_1 + dice_2 < 7 and number < 7 or dice_1 + dice_2 > 7 and number > 7:
+#                 player_bank += bet
+#                 print(f'◝(ᵔᵕᵔ)◜ Вы выиграли {bet} ◝(ᵔᵕᵔ)◜ ')
+#             else:
+#                 player_bank -= bet
+#                 print(f'Вы проиграли {bet}.  ¯\\_(ツ)_/¯ повезёт в следующий раз')
+#             if player_bank <= 0:
+#                 print(f'Ваш баланс пуст')
+#                 keep_play = 'нет'
+#             else:
+#                 keep_play = input('Продолжить игру? ')
+#             match keep_play.lower():
+#                 case 'нет' | 'no' | '0':
+#                     print('Игра окончена')
+#                     break
+#                 case _:
+#                     new_round += 1
+#         else:
+#             print('Неправильный ввод ')
+#
+# game()
+
+# for i in range(1, num):
+#     for j in range(1, 10):
+#         print(f'{i}+{j} = {i + j}')
+#     print()
+
+
+# for i in range(1,num+1):
+#    for k in range(1,num-i+1):
+#        print(' ',end=' ')
+#    for j in range(1, i + 1):
+#        if j//2>num:
+#            print('*', end=' ')
+#        else:
+#            print('*', end=' ')
+#    print()
+
+# num = int(input())
+# for i in range(1, num + 1):
+#    if i > (num + 1) // 2:
+#        for j in range(num + 1, i, -1):
+#            print('*', end='')
+#    else:
+#        for j in range(1, i + 1):
+#            print('*', end='')
+#    print()
+
+# num = int(input())
+# for i in range(1, num + 1):
+#     for j in range(1,i + 1):
+#         print(f'{i}', end='')
+#     print()
+
+# from numba import njit
+#
+# @njit
+# def q():
+#    # a**5 + b**5 + c**5 + d**5 == e**5
+#    for a in range(1, 151):
+#        for b in range(1, 151):
+#            for c in range(1, 151):
+#                for d in range(1, 151):
+#                        if (a**5 + b**5 + c**5 + d**5)**(1/5) == e:
+#                            print(f'a={a}, b={b}, c={c}, d={d}, e={e}, sum={(a + b + c + d + e)}')
+#
+## Запуск функции
+# @timer_decorator
+# def run_q():
+#    q()
+#
+## Запуск функции
+# run_q()
+
+
+# num = int(input())
+# k=0
+# for i in range(1, num + 1):
+#    for j in range(1, i + 1):
+#        k+=1
+#        print(f'{k}', end='')
+#    print()
+
+# 1
+# 121
+# 12321
+# 1234321
+# 123454321
+
+# num = int(input())
+# for i in range(1, num + 1):
+#     # Левая часть строки
+#     for j in range(1, i + 1):
+#         print(j, end=' ')
+#     for j in range(i - 1, 0, -1):
+#         print(j, end=' ')
+
+#     # Переход на новую строку
+#     print()
+
+# num1 = int(input())
+# num2 = int(input())
+# jsum_max = 0
+# jsum = 0
+# for i in range(num1, num2 + 1):
+#     for j in range(1, i + 1):
+#         if i % j == 0:
+#             jsum += j
+#     if jsum >= jsum_max:
+#         num_max = i
+#         jsum_max = jsum
+#     jsum = 0
+# print(num_max, jsum_max)
+
+# num = 6
+# sum = 0
+#
+# while num >= 10:
+#     while num > 0:
+#         sum += num % 10
+#         num //= 10
+#     num = sum
+#     sum = 0
+# print(num)
+
+# sum_fact = 0
+# n = int(input())
+# for k in range(1, n + 1):
+#     fact = 1
+# for i in range(1, k + 1):
+#     fact *= i
+# sum_fact += fact
+# print(sum_fact)
+
+# def tpl_sort(tpl):
+#    return tuple(sorted(tpl)) if all(isinstance(i, int) for i in tpl) else tpl
+#
+# print(tpl_sort((5, 5, 3, 1, 9)))
+# print(tpl_sort((5, 5, 2.1, '1', 9)))
+
+# def slicer(tpl, num):
+#     return (
+#         tuple(tpl[tpl.index(num):])
+#         if tpl.count(num) == 1
+#         else (
+#             tuple(tpl[tpl.index(num): 1 + tpl.index(num, tpl.index(num) + 1)])
+#             if tpl.count(num) > 1
+#             else ()
+#         )
+#     )
+#
+#     # if tpl.count(num) == 1:
+#     #     return tpl[tpl.index(num):]1, 8, 3, 4, 8, 8, 9, 2
+#     # for i in range(len(tlp)):
+#     #     if tlp[i] == num:
+#     #         for j in range(i + 1, len(tlp)):
+#     #             if tlp[j] == num:
+#     #                 return tlp[i:j + 1]
+#     # else:
+#     #     return ()
+#
+#
+# some_tpl = tuple(map(int, (input().split(', '))))
+# some_num = int(input())
+# print(slicer(some_tpl, some_num))
+
+
+# def sieve(lst):
+#     return (lambda new_list: [i for i in reversed(lst) if i not in new_list and not new_list.append(i)])([])
+# def sieve(lst):
+#     new = []
+#     lst = list(reversed(lst))
+#     for i in lst:
+#         if i not in new:
+#             new.append(lst[i])
+#     return tuple(new)
+#
+# some_list = list(map(int, ('2, 1, 3, 1, 2, 5, 5, 9, 2, 0, 0'.split(', '))))
+# print(sieve(some_list))
+
+# def del_from_tuple(tpl, num):
+#     tpl = list(tpl)
+#     if num in tpl:
+#         tpl.remove(num)
+#     return tuple(tpl)
+
+# def del_from_tuple(tup,num):
+#     if num in tup:
+#         return tup[:tup.index(num)] + tup[tup.index(num)+1:]
+#     else: return tup
+# tup = tuple([int(i) for i in input().split(', ')])
+# num = int(input())
+# print(del_from_tuple(tup,num))
+#
+#
+# some_tpl = tuple(map(int, (input().split(', '))))
+# some_num = int(input())
+# print(del_from_tuple(some_tpl, some_num))
+
+# row, col = int(input()), int(input())
+# data = tuple(input() for _ in range(row * col))
+#
+# #for i in range(row):
+# #    for j in range(col):
+# #        print(data[i * col + j], end=' ')
+# #    print()
+#
+#
+# print("\n".join(" ".join(data[i * col + j] for j in range(col)) for i in range(row)))
+
+
+# 3
+# 1 2 3
+# 4 5 6
+# 7 8 9
+#
+# num = int(input())
+# tpl = [tuple(map(int, input().split(' '))) for _ in range(num)]
+# print(sum(tpl[i][i] for i in range(len(tpl))))
+
+# num = int(input())
+# tpl = [tuple(map(int, input().split(' '))) for _ in range(num)]
+
+# print('\n'.join(map(str, list(sum(1 for j in i if j > sum(i) // num) for i in tpl))))
+# for i in tpl:
+#     k=0
+#     for j in i:
+#         if j > sum(i)//num:
+#             k+=1
+#     print(k)
+# 4
+# 1 2 3 4
+# 5 6 3 15
+# 0 2 3 1
+# 5 2 8 5
+
+# num = int(input())
+# tpl = [tuple(map(int, input().split(' '))) for _ in range(num)]
+# # k = []
+# # for i in range(len(tpl)):
+# #     for j_index, j_value in enumerate(tpl[i]):
+# #         if j_index <= tpl[i].index(tpl[i][i]):
+# #             k.append(j_value)
+# # print(max(k))
+#
+#
+# print(max(max((j_value for j_index, j_value in enumerate(tpl[i]) if j_index <= tpl[i].index(tpl[i][i]))) for i in
+#           range(len(tpl))))
+
+
+# print({i: 'pythonist'.count(i) for i in 'pythonist'})
+
+
+# count = int(input())
+# some_dict = dict(input().split(' ') for _ in range(count))
+# #print(list(some_dict.keys())[list(some_dict.values()).index(input())])
+# find = input()
+# if find in list(some_dict.values()):
+#     print(list(some_dict.keys())[list(some_dict.values()).index(find)])
+# else:
+#     print(list(some_dict.values())[list(some_dict.keys()).index(find)])
+#
+# lst_vl,lst_key = list(some_dict.values()), list(some_dict.keys())
+# print(lst_key[lst_vl.index(find)]) if find in lst_vl else print(lst_vl[lst_key.index(find)])
+
+
+# dict1 = {'a': 100, 'z': 333, 'b': 200, 'c': 300, 'd': 45, 'e': 98, 't': 76, 'q': 34, 'f': 90, 'm': 230}
+# dict2 = {'a': 300, 'b': 200, 'd': 400, 't': 777, 'c': 12, 'p': 123, 'w': 111, 'z': 666}
+#
+# # for i in dict1:
+# #     dict1[i] = dict1.get(i) + (dict2.get(i) or 0)
+# #     if i not in dict1:
+# #         dict1[i] = dict2.get(i)
+# sd = {i: dict1.get(i, 0) + dict2.get(i, 0) for i, j in zip(dict1, dict2)}
+# sd.update({i: dict2.get(i) for i in dict2 if i not in dict1})
+# print(sd)
+
+#
+# pets = [('Hatiko', 'Parker', 'Wilson', 50),
+#         ('Rusty', 'Josh', 'King', 25),
+#         ('Fido', 'John', 'Smith', 28),
+#         ('Butch', 'Jake', 'Smirnoff', 18),
+#         ('Odi', 'Emma', 'Wright', 18),
+#         ('Balto', 'Josh', 'King', 25),
+#         ('Barry', 'Josh', 'King', 25),
+#         ('Snape', 'Hannah', 'Taylor', 40),
+#         ('Horry', 'Martha', 'Robinson', 73),
+#         ('Giro', 'Alex', 'Martinez', 65),
+#         ('Zooma', 'Simon', 'Nevel', 32),
+#         ('Lassie', 'Josh', 'King', 25),
+#         ('Chase', 'Martha', 'Robinson', 73),
+#         ('Ace', 'Martha', 'Williams', 38),
+#         ('Rocky', 'Simon', 'Nevel', 32)]
+#
+# dt = {}
+# [dt.setdefault(i[1:], []).append(i[0]) for i in pets]
+# print(dt)
+
+
+# count = int(input())
+# dct = {}
+#
+# for _ in range(count):
+#     k, v = input().split(' ')
+#     dct.update({k: int(v)} if k not in dct else {k: dct.get(k)+int(v)})
+# print(*[f'{k} {v}' for k, v in dict(sorted(dct.items(), key=lambda k: k)).items()], sep='\n')
+
+#
+# s = 'orange strawberry barley gooseberry apple apricot barley currant orange melon pomegranate banana banana orange barley apricot plum grapefruit banana quince strawberry barley grapefruit banana grapes melon strawberry apricot currant currant gooseberry raspberry apricot currant orange lime quince grapefruit barley banana melon pomegranate barley banana orange barley apricot plum banana quince lime grapefruit strawberry gooseberry apple barley apricot currant orange melon pomegranate banana banana orange apricot barley plum banana grapefruit banana quince currant orange melon pomegranate barley plum banana quince barley lime grapefruit pomegranate barley'
+# lst = s.split(' ')
+# dct = {}
+# [dct.update({i: lst.count(i)}) for i in lst]
+# print(min([k for k, v in dct.items() if v == max(dct.values())]))
+
+# line = 'London is the capital of Great Britain. More than six million people live in London. London lies on both banks of the river Thames. It is the largest city in Europe and one of the largest cities in the world. London is not only the capital of the country, it is also a very big port, one of the greatest commercial centres in the world, a university city, and the seat of the government of Great Britain!'
+# line = ''.join([i if i.isalpha() else ' ' for i in 'home sweet home sweet.'.lower()]).split(' ')
+# dct = {i: line.count(i) for i in line if i != ''}
+# print(min([k for k, v in dct.items() if v == min(dct.values())]))
+#
+# line = 'i am i r o n m a n'.split(' ')
+# dct = {}
+# k = 0
+#
+# for i in line:
+#
+#     if i not in dct:
+#         dct.update({i: line.count(i)})
+# print(dct)
+#
+# new_dict = {}
+# for key, value in dct.items():
+#     if '_0' in key:
+#         new_key = key.replace('_0', '')
+#         new_dict[new_key] = value
+#     else:
+#         new_dict[key] = value
+#
+# print(new_dict)
+
+
+# 5
+# Змея: язык программирования Python
+# Баг: от англ. bug — жучок, клоп, ошибка в программе
+# Конфа:конференция
+# Костыль: код, который нужен, чтобы исправить несовершенство ранее написанного кода
+# Бета: бета-версия, приложение на стадии публичного тестирования
+# 3
+# Змея
+# Жаба
+# костыль
+# dct = {}
+# for _ in range(int(input())):
+#     line = input().strip()
+#     if ':' not in line:
+#         line = line.replace(' ', ': ', 1)
+#     key, value = line.split(': ')
+#     dct[key.lower()] = value.strip()
+#
+# for _ in range(int(input())):
+#     print(dct.get(input().strip().lower(), 'Не найдено'))
+
+# def clear_line(line):
+#     return sorted(''.join(char for char in line.lower() if char.isalnum()))
+#
+#
+# print('YES' if clear_line(input()) == clear_line(input()) else 'NO')
+
+# 4
+# Awful Terrible
+# Beautiful Pretty
+# Great Excellent
+# Generous Bountiful
+# Pretty
+
+# dct = (dict(line.split() for line in [input() for _ in range(int(input()))]))
+# word = input()
+# #print(next(k if word==v else for k,v in dct.items()  )
+#
+# for k,v in dct.items():
+#     if word == v:
+#         print(k)
+#     elif word == k:
+#         print(v)
+
+
+# tuples = [(1, 2, 3), (4, 5, 6), (7, 8, 9), (10, 11, 12), (13, 14, 15), (16, 17, 18), (19, 20, 21), (22, 23, 24), (25, 26, 27), (28, 29, 30), (31, 32, 33), (34, 35, 36)]
+# print({i[0]: (i[1],i[2]) for i in tuples})
+#
+# numbers = [34, 10, 4, 6, 10, 23, 90, 100, 21, 35, 95, 1, 36, 38, 19, 1, 6, 87, 1000, 13456, 360]
+# print({i:[j for j in range(1,i+1) if i%j==0] for i in numbers})
+
+
+# t,l,r,b = [],[],[],[]
+#
+# for i in range(len(tpl)):
+#     main_dg_elm, sc_dg_elm = tpl[i].index(tpl[i][i]), tpl[i].index(tpl[i][-i-1])
+#     for j_index, j_value in enumerate(tpl[i]):
+#         if j_index > main_dg_elm and j_index < sc_dg_elm:
+#             t.append(j_value)
+#         if j_index < main_dg_elm and j_index < sc_dg_elm:
+#             l.append(j_value)
+#         if j_index > main_dg_elm and j_index > sc_dg_elm:
+#             r.append(j_value)
+#         if j_index < main_dg_elm and j_index > sc_dg_elm:
+#             b.append(j_value)
+# print(f"""Верхняя четверть: {sum(t)}
+# Правая четверть: {sum(r)}
+# Нижняя четверть: {sum(b)}
+# Левая четверть: {sum(l)}""")
+
+# print([j for i in tpl for j in i if tpl.index(i) < i.index(j) and -(tpl.index(i)+1) < -(i.index(j)+1)])
+
+# num = int(input())
+# tpl = [tuple(map(int, input().split(' '))) for _ in range(num)]
+#
+#
+# def choise_sign(frs, chr, sec):
+#     return frs < sec if chr == '<' else frs > sec
+#
+#
+# def sum_side(chr1, chr2):
+#     return sum([j for row_index, row in enumerate(tpl) for col_index, j in enumerate(row) if
+#                 choise_sign(col_index, chr1, row_index) and choise_sign(col_index, chr2, num - 1 - row_index)])
+#
+#
+# dict_side = {"Верхняя четверть:": ('>', '<'), "Правая четверть:": ('>', '>'),
+#              "Нижняя четверть:": ('<', '>'), "Левая четверть:": ('<', '<')}
+# for key, value in dict_side.items():
+#     print(f'{key} {sum_side(*value)}')
+
+#
+# line = input()
+# dct = {}
+# for i in line.split(' '):
+#     if i not in dct:
+#         dct.update({i: 0})
+#     else:
+#         x = dct.get(i, 0) + 1
+#         dct.update({i: x})
+#         dct.update({f'{i}_{x}': ''})
+# print(*dct.keys())
+
+# from functools import reduce
+#
+# print(sum(reduce(lambda x, y: x * y, range(1, i + 1)) for i in range(1, int(input()) + 1)))
+#
+# n, total, multip = int(input()), 0, 1
+# for i in range(1, n + 1):
+#     multip *= i
+#     total += multip
+# print(total)
+
+
+# print(*[i for i in range(int(input()), int(input()) + 1) if i > 1 and all(i % j != 0 for j in range(2, int(i**0.5) + 1))])
+
+# num = int(input())
+# k = 0
+# for i in range(1, num + 1):
+#     for j in range(1, i + 1):
+#         k += 1
+#         print(k, end=' ')
+#     print()
+#
+#
+# num, k = int(input()), 0
+# [print(*[k := k + 1 for _ in range(i)]) for i in range(1, num + 1)]
+
+
+# n = 8
+# count = 0
+# maximum = -10**12
+# for i in range(1, n + 1):
+#     x = int(input())
+#     if x % 4 == 0:
+#         count += 1
+#         if maximum < x:
+#             maximum = x
+# if count > 0:
+#     print(count)
+#     print(maximum)
+# else:
+#     print('NO')
+
+
+# for i in range(num := int(input())):
+#     if i == 0 or i == num - 1:
+#         print('*' * 19)
+#     else: print('*' + " " * 17 + '*')
+# some_set=set()
+# for a in range(1,33):
+#     for b in range(1,33):
+#         for c in range(1,33):
+#             for d in range(1,33):
+#                 if a**3+b**3==c**3+d**3 and a != b and a != c and a != d and b != c and b != d and c != d:
+#                     some_set.add(a**3+b**3)
+#                     print(a, b, c, d)
+# print(*sorted(some_set))
+
+
+# print(('Цифр нет','Цифра')[any([i for i in input() if i.isdigit()])])
+# line = input()
+# print(sum([1 for i in range(len(line) - 1) if line[i] == line[i + 1]]))
+
+# print('YES' if all(1 for i in input().split(' ') if i == i.capitalize()) else 'NO')
+
+# words = input()
+# print(['NO', 'YES'][all(word[0].isupper() for word in words.split(' '))])
+
+
+# line = 'abcdefg'
+# print(line.find('f'), line.rfind('f')) if line.count('f') > 1 else (print(line.find('f')) if line.count('f')==1 else print('NO'))
+
+# numbers = [(10, 10, 10), (30, 45, 56), (81, 39), (1, 2, 3), (12,), (-2, -4, 100), (1, 2, 99), (89, 9, 34),
+#            (10, 20, 30, -2), (50, 40, 50), (34, 78, 65), (-5, 90, -1, -5), (1, 2, 3, 4, 5, 6), (-9, 8, 4),
+#            (90, 1, -45, -21)]
+#
+# # sum_numbers = [int(sum(v)/len(v)) for v in numbers]
+# # print(numbers[sum_numbers.index(min(sum_numbers))])
+# # print(numbers[sum_numbers.index(max(sum_numbers))])
+#
+# l = lambda x: sum(x) / len(x)
+# print(max(numbers, key=l), min(numbers, key=l))
+#
+# athletes = [('Дима', 10, 130, 35), ('Тимур', 11, 135, 39), ('Руслан', 9, 140, 33), ('Рустам', 10, 128, 30),
+#             ('Амир', 16, 170, 70), ('Рома', 16, 188, 100), ('Матвей', 17, 168, 68), ('Петя', 15, 190, 90)]
+#
+# def sort_list(l, n):
+#     return sorted(l, key=lambda x: x[n])
+#
+#
+# print(sort_list(athletes, int(input())))
+
+#
+# line = list(map(int, input().split(' ')))
+#
+#
+# def summa_num(num, summ=0):
+#     while num != 0:
+#         summ += num % 10
+#         num //= 10
+#     return summ
+#
+#
+# print(sorted(line, key=lambda x: summa_num(x)))
+#
+# numbers = [1014, 1321, 675, 1215, 56, 1386, 1385, 431, 1058, 486, 1434, 696, 1016, 1084, 424, 1189, 475, 95, 1434, 1462,
+#            815, 776, 657, 1225, 912, 537, 1478, 1176, 544, 488, 668, 944, 207, 266, 1309, 1027, 257, 1374, 1289, 1155,
+#            230, 866, 708, 144, 1434, 1163, 345, 394, 560, 338, 232, 182, 1438, 1127, 928, 1309, 98, 530, 1013, 898, 669,
+#            105, 130, 1363, 947, 72, 1278, 166, 904, 349, 831, 1207, 1496, 370, 725, 926, 175, 959, 1282, 336, 1268, 351,
+#            1439, 186, 273, 1008, 231, 138, 142, 433, 456, 1268, 1018, 1274, 387, 120, 340, 963, 832, 1127]
+#
+# print(*map(lambda x: x ** 3, filter(lambda x: (1000 > x > 99 and x % 5 == 2), numbers)), sep='\n')
+
+# data = [['Tokyo', 35676000, 'primary'],
+#         ['New York', 19354922, 'nan'],
+#         ['Mexico City', 19028000, 'primary'],
+#         ['Mumbai', 18978000, 'admin'],
+#         ['Sao Paulo', 18845000, 'admin'],
+#         ['Delhi', 15926000, 'admin'],
+#         ['Shanghai', 14987000, 'admin'],
+#         ['Kolkata', 14787000, 'admin'],
+#         ['Los Angeles', 12815475, 'nan'],
+#         ['Dhaka', 12797394, 'primary'],
+#         ['Buenos Aires', 12795000, 'primary'],
+#         ['Karachi', 12130000, 'admin'],
+#         ['Cairo', 11893000, 'primary'],
+#         ['Rio de Janeiro', 11748000, 'admin'],
+#         ['Osaka', 11294000, 'admin'],
+#         ['Beijing', 11106000, 'primary'],
+#         ['Manila', 11100000, 'primary'],
+#         ['Moscow', 10452000, 'primary'],
+#         ['Istanbul', 10061000, 'admin'],
+#         ['Paris', 9904000, 'primary']]
+#
+# print(*map(lambda x:x[0], filter(lambda x: x[1] > 10000000 and x[2] == 'primary', data)))
+#
+# from functools import reduce
+# print(reduce(lambda x, y: f'{x} , {y}',sorted((map(lambda x: x[0], filter(lambda x: x[1] > 10000000 and x[2] == 'primary', data))))))
+
+# # 1
+# # hello
+# # True
+#
+# def print_args(*args):
+#     print(*args, sep='\n')
+#
+#
+# print_args(1, 'hello', True)
+
+#
+# numbers = [46, 61, 34, 17, 56, 26, 93, 1, 3, 82, 71, 37, 80, 27, 77, 94, 34, 100, 36, 81, 33, 81, 66, 83, 41, 80, 80,
+#            93, 40, 34, 32, 16, 5, 16, 40, 93, 36, 65, 8, 19, 8, 75, 66, 21, 72, 32, 41, 59, 35, 64, 49, 78, 83, 27, 57,
+#            53, 43, 35, 48, 17, 19, 40, 90, 57, 77, 56, 80, 95, 90, 27, 26, 6, 4, 23, 52, 39, 63, 74, 15, 66, 29, 88, 94,
+#            37, 44, 2, 38, 36, 32, 49, 5, 33, 60, 94, 89, 8, 36, 94, 46, 33]
+#
+#
+# def cel(num):
+#     list_out = []
+#     for i in num:
+#         if i % 2 == 0:
+#             i //= 2
+#         list_out.append(i)
+#     return list_out
+#
+# print(*map(lambda x: x//2 if x % 2 == 0 else x,filter(lambda x: (x % 2 != 0 and x < 47) or x%2 == 0,numbers)))
+# Напишите программу, которая с помощью встроенных функций map() и filter() удаляет из списка numbers все нечетные элементы,
+# большие 47, а все четные элементы нацело делит на два (целочисленное деление – //).
+# Полученные числа следует вывести на одной строке, разделив символом пробела и сохранив исходный порядок.
+
+
+# data = [(19542209, 'New York'), (4887871, 'Alabama'), (1420491, 'Hawaii'), (626299, 'Vermont'),
+#         (1805832, 'West Virginia'), (39865590, 'California'), (11799448, 'Ohio'), (10711908, 'Georgia'),
+#         (10077331, 'Michigan'), (10439388, 'Virginia'), (7705281, 'Washington'), (7151502, 'Arizona'),
+#         (7029917, 'Massachusetts'), (6910840, 'Tennessee')]
+#
+# print(sorted(data, key=lambda x: x[1][-1]))
+# print(*map(lambda x: f'{x[1]}: {x[0]}', reversed(sorted(reversed(data), key=lambda x: x[1][-1]))), sep='\n')
+
+# Vermont: 626299
+# Massachusetts: 7029917
+# Ohio: 11799448
+# Michigan: 10077331
+# Washington: 7705281
+# New York: 19542209
+# Hawaii: 1420491
+# Tennessee: 6910840
+# Alabama: 4887871
+# West Virginia: 1805832
+# California: 39865590
+# Georgia: 10711908
+# Virginia: 10439388
+# Arizona: 7151502
+
+
+# data = ['год', 'человек', 'время', 'дело', 'жизнь', 'день', 'рука', 'раз', 'работа', 'слово', 'место', 'лицо', 'друг',
+#         'глаз', 'вопрос', 'дом', 'сторона', 'страна', 'мир', 'случай', 'голова', 'ребенок', 'сила', 'конец', 'вид',
+#         'система', 'часть', 'город', 'отношение', 'женщина', 'деньги']
+# #вид год дом мир раз глаз дело день друг лицо рука сила время город жизнь конец место слово часть
+# # вопрос голова деньги работа случай страна женщина ребенок система сторона человек отношение
+# print(*sorted(data, key=lambda x: (len(x), x)))
+#
+# print('2024-05-19'.islower())
+# print('2024-05-19'.isupper())
+
+
+# """
+# 4
+# Не проходит 7 тест, что у меня нет так?
+# Авторы, вы надоели уже со своей математикой и шахматами!
+#
+# Почему у меня выходит ошибка IndexError?
+# """
+#
+# for i, v in enumerate([input() for _ in range(int(input()))]):
+#     print(f'{i}:' + ('COMMENT SHOULD BE DELETED' if all([i.isspace() for i in v]) else v))
+
+# import re
+# ALLOWED_LETTERS = "АВЕКМНОРСТУХ"
+# pattern = rf"^[{ALLOWED_LETTERS}]\d{3}[{ALLOWED_LETTERS}]{2}_\d{2,3}$"
+# print('YES' if re.match(pattern, input()) else 'NO')
+
+# line = input()
+# if line.startswith('@') and 4 < len(line) < 16 and all([1 if i.isalnum() and (i.islower() if i.isalpha() else 1) else 0 for i in line[1:]]):
+#     print('Correct')
+# else:
+#     print('Incorrect')
+
+
+# # Ввод данных
+# day = int(input())
+# current_weight = float(input())
+#
+# # Исходные данные
+# start_weight = 100
+# target_weight = 88
+# total_days = 60
+#
+# # Расчет ежедневного снижения и цели
+# daily_loss = (start_weight - target_weight) / total_days
+# goal_weight = start_weight - daily_loss * day  # Исправлено: умножаем на day, а не (day-1)
+#
+# # Проверка выполнения плана
+# if current_weight <= goal_weight:
+#     print("Все идет по плану")
+# else:
+#     print("Что-то пошло не так")
+#
+# # Вывод информации с одним знаком после запятой для цели
+# print(f"#{day} ДЕНЬ: ТЕКУЩИЙ ВЕС = {current_weight} кг, ЦЕЛЬ по ВЕСУ = {goal_weight:.1f} кг")
+
+
+# line = input()
+#
+# def in_line(some_line: str, step=3, start_uni='[u-', end_uni=']'):
+#     while not (some_line.find(start_uni) == -1):
+#         start = some_line.find(start_uni) + step
+#         code = some_line[start:start + step + 1]
+#         some_line = some_line.replace(start_uni + code + end_uni, chr(int(code)))
+#     return some_line
+
+# print(in_line(line))
+#
+# буря
+# мглою
+# небо
+# кроет
+# КОНЕЦ
+
+data = list(iter(lambda: input(), 'КОНЕЦ'))
+max_data = max(data)
+min_data = min(data)
+
+print(f'Минимальная строка ⬇️: {min_data}\nМаксимальная строка ⬆️: {max_data}')
