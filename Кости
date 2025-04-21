@@ -1,0 +1,85 @@
+import random
+
+
+def game(player_bank=100, keep_play='Да', new_round=1):
+    while keep_play:
+        print('=' * 50 + f'Раунд: {new_round}' + '=' * 50)
+        print(f'В банке на данный момент: {player_bank}')
+        try:
+            number, bet = int(input('Загадайте число (2-12) : ')), int(input('Сделайте ставку: '))
+        except ValueError:
+            print('Введите число!')
+            continue
+        if (1 < number < 13) and (bet <= player_bank):
+            def draw_dice(number):
+                match number:
+                    case 1:
+                        print('''
+                      ┏━━━┓
+                     ┃     ┃
+                    ┃   *   ┃
+                     ┃     ┃
+                      ┗━━━┛''')
+                    case 2:
+                        print('''
+                          ┏━━━┓
+                         ┃ *   ┃
+                        ┃       ┃
+                         ┃   * ┃
+                          ┗━━━┛''')
+                    case 3:
+                        print('''
+                          ┏━━━┓
+                         ┃*    ┃
+                        ┃   *   ┃
+                         ┃    *┃
+                          ┗━━━┛''')
+                    case 4:
+                        print('''
+                              ┏━━━┓
+                             ┃ * * ┃
+                            ┃       ┃
+                             ┃ * * ┃ 
+                              ┗━━━┛''')
+                    case 5:
+                        print('''
+                              ┏━━━┓
+                             ┃ * * ┃
+                            ┃   *   ┃
+                             ┃ * * ┃ 
+                              ┗━━━┛''')
+                    case 6:
+                        print('''
+                             ┏━━━┓
+                            ┃ * * ┃
+                           ┃  * *  ┃
+                            ┃ * * ┃ 
+                             ┗━━━┛''')
+
+            draw_dice(dice_1 := random.randint(1, 6))
+            draw_dice(dice_2 := random.randint(1, 6))
+            if dice_1 + dice_2 == number:
+                player_bank += bet * 4
+                print(f'♡⸜(｡˃ ᵕ ˂)⸝ Вы выиграли! {bet * 4} Точное попадание! ⸜(˃ ᵕ ˂｡)⸝♡')
+            elif dice_1 + dice_2 < 7 and number < 7 or dice_1 + dice_2 > 7 and number > 7:
+                player_bank += bet
+                print(f'◝(ᵔᵕᵔ)◜ Вы выиграли {bet} ◝(ᵔᵕᵔ)◜ ')
+            else:
+                player_bank -= bet
+                print(f'Вы проиграли {bet}.  ¯\\_(ツ)_/¯ повезёт в следующий раз')
+            if player_bank <= 0:
+                print(f'Ваш баланс пуст')
+                keep_play = 'нет'
+            else:
+                keep_play = input('Продолжить игру? ')
+            match keep_play.lower():
+                case 'нет' | 'no' | '0':
+                    print('Игра окончена')
+                    break
+                case _:
+                    new_round += 1
+        else:
+            print('Неправильный ввод ')
+
+
+game()
