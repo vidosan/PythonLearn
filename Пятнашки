@@ -1,0 +1,199 @@
+import random
+from time import sleep
+import keyboard
+
+
+def field_generation(def_row=2, def_col=3, acceptable_size=10):
+    """
+       Функция запрашивает у пользователя размеры игрового поля (количество строк и столбцов).
+       Если пользователь вводит некорректные значения, используются стандартные размеры.
+
+       Параметры:
+       - def_row (int): Стандартное количество строк (по умолчанию 2).
+       - def_col (int): Стандартное количество столбцов (по умолчанию 3).
+
+       Возвращает:
+       - tuple: Кортеж из двух целых чисел (количество строк, количество столбцов).
+       """
+    print('Добро пожаловать в пятнашки!')
+    print('Стандартное поле 2 на 3')
+    print(
+        'Если вы введете некорректные значения (не числа или значения меньше стандартных и больше 10),\n будет использовано стандартное поле.')
+
+    numbers_row = input("Введите количество строк: ")
+    numbers_col = input("Введите количество столбцов: ")
+    if numbers_row.isdigit() == False or acceptable_size < int(numbers_row) or int(numbers_col) < def_row:
+        numbers_row = def_row
+    if numbers_col.isdigit() == False or acceptable_size < int(numbers_col) or int(numbers_col) < def_col:
+        numbers_col = def_col
+    return int(numbers_row), int(numbers_col)
+
+
+def shuffle(width, height, one_more=1):
+    """
+        Функция генерирует случайное расположение мебели на игровом поле заданного размера.
+        Возвращает список мебели и кортеж с индексами "шкафа" и "кресла".
+
+        Параметры:
+        - width (int): Ширина игрового поля.
+        - height (int): Высота игрового поля.
+        - one_more (int): Множитель для нумерации предметов мебели (по умолчанию 1).
+
+        Возвращает:
+        - tuple: Кортеж из 2 элементов:
+            1. Список мебели, перемешанный случайным образом.
+            2. Кортеж с индексами "шкафа" и "кресла".
+        """
+    total_cells = width * height
+    furniture = ["кресло", "шкаф", " "]
+    table_number, chair_number = 0, 0
+    while len(furniture) < total_cells:
+        if len(furniture) % 2 != 0:
+            table_number += one_more
+            furniture.append(f"стол_{table_number}")
+        else:
+            if len(furniture) + 2 <= total_cells:
+                chair_number += one_more
+                furniture.append(f"стул_{chair_number}")
+                chair_number += one_more
+                furniture.append(f"стул_{chair_number}")
+            else:
+                chair_number += one_more
+                furniture.append(f"стул_{chair_number}")
+    random.shuffle(furniture)
+    return furniture, (furniture.index("шкаф"), furniture.index("кресло"))
+
+
+def available_move(furniture, free_space, height):
+    """
+        Функция определяет возможные направления перемещения предметов мебели.
+        Параметры:
+        - furniture (list): список предметов мебели.
+        - free_space (int): индекс свободной ячейки.
+        - height (int): высота сетки
+
+        Возвращает:
+        - move_dict: словарь с доступными направлениями и соответствующей мебелью.
+        """
+    move_dict = {}
+    for index, v in enumerate(furniture):
+        if free_space - height == index:
+            move_dict['down'] = (v, '↓')
+        elif free_space + height == index:
+            move_dict["up"] = (v, '↑')
+        elif free_space // height == index // height and free_space - 1 == index:
+            move_dict['right'] = (v, '→')
+        elif free_space // height == index // height and free_space + 1 == index:
+            move_dict['left'] = (v, '←')
+    return move_dict
+
+
+def choice_direction(move_dict, move_number, furniture, free_space, side):
+    """
+        Функция обрабатывает выбор направления перемещения мебели и обновляет состояние игрового поля.
+
+        Параметры:
+        - move_dict (dict): Словарь доступных направлений перемещения. Ключи — направления ('up', 'down', 'left', 'right'),
+                            значения — кортежи вида (предмет_мебели, символ_направления).
+        - move_number (int): Текущее количество ходов.
+        - furniture (list): Список предметов мебели на игровом поле.
+        - free_space (int): Индекс свободного пространства на игровом поле.
+        - side (str): Выбранное направление перемещения (например, 'up', 'down', 'left', 'right').
+
+        Возвращает:
+        - move_number: Обновленное количество ходов после выполнения перемещения.
+        """
+    if side.lower() not in move_dict.keys():
+        print("Неправильный ввод")
+    else:
+        move_number += 1
+        furniture[furniture.index(move_dict[side][0])], furniture[free_space] = furniture[free_space], furniture[
+            furniture.index(move_dict[side][0])]
+    return move_number
+
+
+def handle_key_event(event):
+    """
+        Функция обрабатывает событие нажатия клавиш и выполняет соответствующие действия.
+
+        Параметры:
+        - event: Объект события, содержащий информацию о нажатой клавише.
+                 Ожидается, что объект имеет атрибут `name`, который содержит название клавиши.
+
+        Действия:
+        - Если нажата одна из клавиш 'up', 'down', 'left', 'right':
+            1. Эмулируется ввод названия клавиши.
+            2. После короткой паузы эмулируется нажатие клавиши Enter.
+            3. Консоль очищается.
+        """
+    if event.name in ['up', 'down', 'left', 'right']:
+        keyboard.write(event.name)
+        sleep(0.25)
+        keyboard.send('enter')
+        print("\n" * 50)
+
+
+def print_grid(furniture, row, col, move_number, def_space=15):
+    """
+        Функция выводит игровое поле в виде сетки с предметами мебели.
+
+        Параметры:
+        - furniture (list): Список предметов мебели на игровом поле.
+        - row (int): Количество строк в сетке.
+        - col (int): Количество столбцов в сетке.
+        - move_number (int): Текущий номер хода.
+        - def_space (int): Ширина ячейки сетки (по умолчанию 15 символов).
+
+        Действия:
+        - Выводит текущий номер хода.
+        - Выводит сетку с предметами мебели, разбитыми по строкам и столбцам.
+        """
+    print(f"        Ход №    {move_number}\n")
+    print('    '.join([f"        {i + 1}   " for i in range(col)]))
+    print(" ┍" + "+".join(["-" * def_space] * col) + "┓")
+    for i in range(row):
+        cells = [f"{cell:^13}" for cell in furniture[i * col:i * col + col]]
+        print(f"{i + 1}| " + " | ".join(cells) + " |")
+        if i == row - 1:
+            print(" └" + "+".join(["-" * def_space] * col) + "┘\n")
+        else:
+            print(" ┝" + "+".join(["-" * def_space] * col) + "┥")
+
+
+def start_game():
+    """
+        Основная функция для запуска игры.
+
+        Действия:
+        - Генерирует игровое поле.
+        - Перемешивает мебель на поле.
+        - Обрабатывает ходы игрока до победы.
+        - Предлагает продолжить игру или выйти.
+        """
+    print(
+        'Для перемещения во время игры вы можете использовать как стрелки на клавиатуре,\nтак и вводить направления текстом (up, down, left, right).\n')
+    while True:
+        row, col = field_generation()
+        furniture, win_pos = shuffle(row, col)
+        move_number = 0
+        keyboard.on_press(handle_key_event)
+
+        while True:
+            print_grid(furniture, row, col, move_number)
+            if (furniture.index("кресло"), furniture.index("шкаф")) == win_pos:
+                print("YOU WIN      ദ്ദി( • ᴗ - ) ✧")
+                keyboard.unhook_all()
+                break
+            free_space = furniture.index(" ")
+            moves = available_move(furniture, free_space, col)
+            print('Доступные движения: ', *[i[1] for i in (moves.values())],
+                  f'     Цель: кресло в {win_pos[0] + 1}, шкаф в {win_pos[1] + 1}')
+            move_number = choice_direction(moves, move_number, furniture, free_space, input())
+        print('Отлично! Продолжим?')
+        if input().lower() in ('нет', 'no', '0', 'e', 'q', 'exit', 'quit'):
+            print('До встречи! ')
+            break
+
+
+if __name__ == '__main__':
+    start_game()
